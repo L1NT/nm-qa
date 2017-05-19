@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "jasmine": "^2.6.0",
-    "karma": "^1.7.0",
-    "requirejs": "^2.3.3"
+    "jasmine-node-karma": "^1.6.1",
+    "karma": "^1.7.0"
   },
   "jshintConfig": {
     "esversion": 6,
     "loopfunc": true
   },
   "scripts": {
-    "test": "karma start"
+    "test": "jasmine-node-karma ./"
   },
   "devDependencies": {
     "karma-chrome-launcher": "^2.1.1",

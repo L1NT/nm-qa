@@ -8,17 +8,21 @@ function pangram(str) {
     let missing = 'abcdefghijklmnopqrstuvwxyz';
     if (typeof str === 'string') {
         for (let letter of str) {
-            // let i = missing.indexOf(letter);
-            // if (i > -1)
-            // substring concatentation is ugly; so lets improvise a String.prototype.splice(start:number, deleteCount:number=1)
-                missing = missing.split(letter).join('');
+            // finding indexes and using substring concatentation is ugly;
+            // so lets improvise a String.prototype.splice(start:number, deleteCount:number=1)
+            missing = missing.split(letter.toLowerCase()).join('');
         }
     }
-    return missing.length ? missing : 'This is a Pangram';
+    return missing.length ? missing : SUCCESS_MSG;
 }
 
-module.exports = {pangram: pangram};
+const SUCCESS_MSG = 'This is a Pangram';
 
+
+module.exports = {
+    pangram: pangram,
+    SUCCESS_MSG: SUCCESS_MSG
+};
 
 // Python-style convention for self-running modules
 if (process.argv[1] === __filename) {
