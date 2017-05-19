@@ -1,0 +1,28 @@
+{
+  "name": "nm-qa",
+  "author": "Luke Jeter",
+  "version": "1.0.0",
+  "main": "pangram.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L1NT/nm-qa.git"
+  },
+  "dependencies": {
+    "jasmine": "^2.6.0",
+    "karma": "^1.7.0",
+    "requirejs": "^2.3.3"
+  },
+  "jshintConfig": {
+    "esversion": 6,
+    "loopfunc": true
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-requirejs": "^1.1.0"
+  }
+}
